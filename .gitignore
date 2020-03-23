@@ -2,3 +2,7 @@
 *.aps
 *.pfx
 *.vs
+/SignToolCode/SignTool/SignToolDll/bin
+/SignToolCode/SignTool/SignToolDll/obj
+/SignToolCode/SignTool/SignToolExe/obj
+/SignToolCode/SignTool/SignToolExe/bin

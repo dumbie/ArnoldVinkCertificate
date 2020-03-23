@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.902
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignToolExe", "SignTool\SignToolExe\SignToolExe.csproj", "{8FCC4000-49B4-4E01-AB8C-596F2707351A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8CC38149-F352-4EFD-A770-C436B68F9232} = {8CC38149-F352-4EFD-A770-C436B68F9232}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignToolDll", "SignTool\SignToolDll\SignToolDll.csproj", "{8CC38149-F352-4EFD-A770-C436B68F9232}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8FCC4000-49B4-4E01-AB8C-596F2707351A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FCC4000-49B4-4E01-AB8C-596F2707351A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FCC4000-49B4-4E01-AB8C-596F2707351A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FCC4000-49B4-4E01-AB8C-596F2707351A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CC38149-F352-4EFD-A770-C436B68F9232}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CC38149-F352-4EFD-A770-C436B68F9232}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CC38149-F352-4EFD-A770-C436B68F9232}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CC38149-F352-4EFD-A770-C436B68F9232}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {80B99EBE-DA27-4014-8D94-0A792DF26029}
+	EndGlobalSection
+EndGlobal
