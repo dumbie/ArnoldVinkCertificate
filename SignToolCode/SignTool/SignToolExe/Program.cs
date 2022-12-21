@@ -45,7 +45,7 @@ namespace SignToolDll
             }
 
             string[] skipFiles = new string[] { "SignToolExe", "SignToolDll", @"\obj\" };
-            string arguments = "sign /t http://timestamp.digicert.com /f " + pathCertificate;
+            string arguments = "sign /fd certHash /t http://timestamp.digicert.com /f " + pathCertificate;
 
             if (!File.Exists(pathSignTool))
             {
@@ -65,9 +65,18 @@ namespace SignToolDll
                     Process LaunchProcess = new Process();
                     LaunchProcess.StartInfo.UseShellExecute = false;
                     LaunchProcess.StartInfo.CreateNoWindow = true;
+                    LaunchProcess.StartInfo.RedirectStandardOutput = true;
                     LaunchProcess.StartInfo.FileName = pathSignTool;
                     LaunchProcess.StartInfo.Arguments = arguments + " " + signFile;
                     LaunchProcess.Start();
+                    while (!LaunchProcess.StandardOutput.EndOfStream)
+                    {
+                        string readLine = LaunchProcess.StandardOutput.ReadLine();
+                        if (!string.IsNullOrWhiteSpace(readLine) && readLine != "Done Adding Additional Store")
+                        {
+                            Console.WriteLine(readLine);
+                        }
+                    }
                 }
                 catch { }
             }
